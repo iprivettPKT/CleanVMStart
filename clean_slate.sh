@@ -5,10 +5,10 @@ sudo apt upgrade -yy
 
 # Create directories
 echo "[+] Setting up directories"
-mkdir ~/Isaac
-cd ~/Isaac
-mkdir Tools Scans
-cd Tools
+mkdir ~/isaac
+cd ~/isaac
+mkdir tools scans
+cd tools
 echo "[+] Directories set up successfully. Currently in $(pwd)."
 
 # Installing git
@@ -26,6 +26,11 @@ sudo apt-get install tmux -yy
 # Installing other tools
 echo "[+] Installing requested tools"
 sudo apt install nikto sslscan seclists gobuster apache2 dnsutils dsniff responder certipy enum4linux gcc -yy
+
+# Installing Caido
+echo "[+] Installing Caido"
+sudo wget https://storage.googleapis.com/caido-releases/v0.29.2/caido-linux-v0.29.2-2e9984b7.tar.gz
+tar -xzf caido-linux-v0.29.2-2e9984b7.tar.gz 
 
 # Installing Python libraries
 echo "[+] Installing Python libraries"
